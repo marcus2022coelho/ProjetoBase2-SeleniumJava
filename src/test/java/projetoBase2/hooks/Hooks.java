@@ -11,7 +11,7 @@ public class Hooks {
 
     @Before
     public void before(){
-        driver = DriverFactory.inicializaDriver(System.getProperty("browser","firefox"));
+        driver = DriverFactory.inicializaDriver(System.getProperty("browser","chrome"));
     }
 
     @After
