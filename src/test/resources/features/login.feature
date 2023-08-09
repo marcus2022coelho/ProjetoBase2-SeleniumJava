@@ -9,6 +9,16 @@ Feature: LoginMantis
     And tocar no parâmetro confirmar
     Then o sistema deve realizar o login e exibir a tela do mantis com o usuário logado
 
+
+
+
+
+
+
+
+
+
+
 #  Scenario: Realizar Login_LoginSucesso_Table
 #    Given acesso a tela de login
 #    When Informar usuario

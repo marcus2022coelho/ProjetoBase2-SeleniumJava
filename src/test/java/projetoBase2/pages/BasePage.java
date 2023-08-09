@@ -1,7 +1,10 @@
 package projetoBase2.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import projetoBase2.utils.ConfigLoader;
 
@@ -21,6 +24,21 @@ public class BasePage {
         driver.get(ConfigLoader.getInstance().getBaseUrl() + endPoint);
     }
 
+    protected boolean returnIfElementExistsByTime(By locator, int time) {
+        boolean result = false;
+        try {;
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+            result = true;
+        } catch (Exception e) {
+        }
+        return result;
+    }
+    protected WebElement waitForElementByTime(By locator, int time) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        WebElement element = driver.findElement(locator);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        return element;
+    }
 
 
 }
