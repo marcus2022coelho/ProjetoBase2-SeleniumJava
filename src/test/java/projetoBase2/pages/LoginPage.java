@@ -26,8 +26,11 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//span[@class='user-info']")
     private WebElement validaUsuarioLogado;
 
+    By MensagemUsuarioIncorreto = (By.xpath("//p[contains(text(),'Sua conta pode estar desativada ou bloqueada ou o ')]"));
+
 
   //Ações da tela
+
     public void informarUsuario(String username){
         //por ser um campo aberto não necessita fazer dessa forma
         usernameField.sendKeys(username);
@@ -46,6 +49,11 @@ public class LoginPage extends BasePage{
        String nameUser =  validaUsuarioLogado.getText();
        return nameUser;
 
+    }
+
+    public String MensagemUsuarioInvalido(){
+        WebElement mensagemUserInvalid = wait.until(ExpectedConditions.visibilityOf(driver.findElement(MensagemUsuarioIncorreto)));
+        return  mensagemUserInvalid.getText();
     }
 
 

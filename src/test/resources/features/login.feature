@@ -1,33 +1,29 @@
+@login_Mantis @mantis
 Feature: LoginMantis
 
-  @regressao
   Scenario: Realizar Login_LoginSucesso
      Given acesso a tela de login
-    When informar usuario 'administrator'
+    When informar usuario
     And tocar no parâmetro confirmar
-    And informar senha 'abc123'
+    And informar senha
     And tocar no parâmetro confirmar
     Then o sistema deve realizar o login e exibir a tela do mantis com o usuário logado
 
+  Scenario: Realizar Login_UsernameIncorreto
+    Given acesso a tela de login
+    When informar usuario incorreto
+    And tocar no parâmetro confirmar
+    And informar senha
+    And tocar no parâmetro confirmar
+    Then o sistema deve exibir mensagem de erro na tela
 
-
-
-
-
-
-
-
-
-
-#  Scenario: Realizar Login_LoginSucesso_Table
-#    Given acesso a tela de login
-#    When Informar usuario
-#      | administrator | abc123 |
-#    And tocar no parâmetro confirmar
-#    And Informar senha
-#      | administrator | abc123 |
-#    And tocar no parâmetro confirmar
-#    Then o sistema deve realizar o login e exibir a tela do mantis com o usuário logado
+  Scenario: Realizar Login_PasswordIncorreto
+    Given acesso a tela de login
+    When informar usuario
+    And tocar no parâmetro confirmar
+    And informar senha incorreta
+    And tocar no parâmetro confirmar
+    Then o sistema deve exibir mensagem de erro na tela
 
 
 #  @automatizar
@@ -43,24 +39,6 @@ Feature: LoginMantis
 #      | username      | senha  |
 #      | administrator | abc123 |
 #      | teste1        | teste2 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  # @CustomType
   #Scenario Outline: Login sucesso2

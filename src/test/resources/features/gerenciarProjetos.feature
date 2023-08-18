@@ -1,11 +1,11 @@
-@gerenciar_projeto @mantis @administrator
+@gerenciar_projeto @mantis
 Feature: Gerenciar projetos do Mantis
 
   Background:
     Given acesso a tela de login
-    And informar usuario 'administrator'
+    And informar usuario
     And tocar no parâmetro confirmar
-    And informar senha 'abc123'
+    And informar senha
     And tocar no parâmetro confirmar
     And acessar Gerenciar no Menu
     And acessar Gerenciar Projetos
@@ -47,3 +47,4 @@ Feature: Gerenciar projetos do Mantis
     Examples:
       | nomeProjetoIgual                   | Estado          | Visibilidade | Descricao                          |
       | Cadastrar o projeto com mesmo nome | desenvolvimento | privado      | Cadastrar o projeto com mesmo nome |
+
