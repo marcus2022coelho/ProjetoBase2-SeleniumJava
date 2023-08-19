@@ -23,7 +23,6 @@ public class VerTarefaPage extends BasePage {
     // botão destinado a realizar a ação que foi selecionada no seletor de opcoes
     By buttomOkAcaoComboBox = By.xpath("//input[@value='OK']");
 
-
     //clonar tarefa
     By copiarTarefas = By.xpath("//input[@value='Copiar Tarefas']");
     By confirmarCopiarTarefa = By.xpath("//input[@value='Copiar Tarefas']");
@@ -31,7 +30,8 @@ public class VerTarefaPage extends BasePage {
 
 
     //enviar lembrete
-    By selecionarTarefaLembrete = (By.xpath("//td[contains(@class, 'column-id')]//a"));
+    //preciso de qualquer tarefa
+    By selecionarTarefaLembrete = (By.xpath("//tr[1]//td[contains(@class, 'column-id')]"));
     By enviarLembreteMenu = (By.xpath("//a[normalize-space()='Enviar um lembrete']"));
     By preencherTextoLembrete = (By.xpath("//*[@id=\"send-reminder-div\"]"+"/form/div/div[2]/div[1]/div/table/tbody/tr/td[2]/textarea"));
     By buttonEnviarLembrete = (By.xpath("//input[@value='Enviar']"));
@@ -48,12 +48,6 @@ public class VerTarefaPage extends BasePage {
     By pesquisarTarefa = (By.xpath("//input[@value='Aplicar Filtro']"));
     // retorno da busca do filtro
     By retornoFiltroTrue =  By.xpath("//*[@id=\"buglist\"]/tbody");
-
-
-    //a[@id='reporter_id_filter']
-    //a[@id='reporter_id_filter']
-    //a[@id='reporter_id_filter']
-
 
 
     //salvar o filtro
