@@ -13,11 +13,6 @@ public class MinhaVisaoPage extends BasePage {
 
     // mapeamento dos elementos da tela
 
-
-
-
-    //Atribuidos a mim - vedr tarefa
-
     //Ações dos elementos da tela
 
     public void abrirTelaDoMenuGerenciarPeloNome(String texto){

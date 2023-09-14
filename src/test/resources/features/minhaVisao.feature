@@ -7,7 +7,7 @@ Feature: minhaVisao
     And informar senha
     And tocar no parâmetro confirmar
     And acesso ao menu minhaVisao
-
+@teste
   Scenario Outline: MinhaVisao_VerTarefas
     When tocar no parâmetro "<Campo>"
     Then o sistema redireciona o usuario para a tela de tarefas

@@ -2,13 +2,14 @@
 Feature: LoginMantis
 
   Scenario: Realizar Login_LoginSucesso
-     Given acesso a tela de login
+    Given acesso a tela de login
     When informar usuario
     And tocar no parâmetro confirmar
     And informar senha
     And tocar no parâmetro confirmar
     Then o sistema deve realizar o login e exibir a tela do mantis com o usuário logado
 
+  @teste
   Scenario: Realizar Login_UsernameIncorreto
     Given acesso a tela de login
     When informar usuario incorreto
@@ -17,6 +18,7 @@ Feature: LoginMantis
     And tocar no parâmetro confirmar
     Then o sistema deve exibir mensagem de erro na tela
 
+  @teste
   Scenario: Realizar Login_PasswordIncorreto
     Given acesso a tela de login
     When informar usuario
