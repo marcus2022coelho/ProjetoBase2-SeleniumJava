@@ -1,5 +1,5 @@
 @ver_tarefas
-Feature: Realizar filtros na tarefas, notificar os usuarios com lembretes
+Feature: Realizar filtros na tarefas
 
   Background:
     Given acesso a tela de login
@@ -67,12 +67,12 @@ Feature: Realizar filtros na tarefas, notificar os usuarios com lembretes
   Scenario Outline: Salvar filtro de pesquisa já realizada
     And filtro pelos campos "<relator>","<atribuidoA>","<prioridade>"
     When clico para salvar o filtro
-    And preencho o "<nomeDoFiltro>"
+    And preencho o nome do Filtro
     Then o sistema salva o filtro
 
     Examples:
-      | relator    | atribuidoA | prioridade | nomeDoFiltro  |
-      | [qualquer] | [qualquer] | [qualquer] | Filtro Teste1 |
+      | relator    | atribuidoA | prioridade |
+      | [qualquer] | [qualquer] | [qualquer] |
 
   @teste
   Scenario Outline: Salvar filtro_Voltar

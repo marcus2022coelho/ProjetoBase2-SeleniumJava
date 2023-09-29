@@ -30,7 +30,7 @@ public class CriarTarefaPage extends BasePage{
     // botão criar tarefa
     By botaoCriarTarefa = (By.xpath("//input[@value='Criar Nova Tarefa']"));
     By confirmacaoTarefaCriadaSucesso = (By.xpath("//*[contains(text(), 'sucesso')]"));
-    By mensagemCampoObrigatorio = (By.xpath("//*[contains(text(), 'Preencha este campo')]"));
+    By mensagemCampoObrigatorio = (By.xpath("//*[contains(text(), 'Por favor, verifique novamente suas entradas.')]"));
 
     //cadastrar acoes dos elementos
 

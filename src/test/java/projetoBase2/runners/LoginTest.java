@@ -5,28 +5,25 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class LoginTest {
+@CucumberOptions(
+        plugin = {"pretty", "html:target/cucumber.html", "summary"},
+        //dryRun = true,
+        tags = "@teste",
+        glue = {"projetoBase2"},
+        features = "src/test/resources/features/login.feature"
 
-    @CucumberOptions(
-            plugin = {"pretty", "html:target/cucumber.html", "summary"},
-            //dryRun = true,
-            tags = "@regressao",
-            glue = {"projetoBase2"},
-            features = "src/test/resources/features/login.feature"
-
-    )
-    public class TesteNGRunnerTest extends AbstractTestNGCucumberTests {
+)
+public class LoginTest extends AbstractTestNGCucumberTests {
 
 
-        @BeforeClass
-        public void beforeclass() {
-            System.out.println("BeforeClass-testeNG");
-        }
-
-        @AfterClass
-        public void afterclass() {
-            System.out.println("AfterClass-testeNG");
-        }
-
+    @BeforeClass
+    public void beforeclass() {
+        System.out.println("BeforeClass-testeNG");
     }
+
+    @AfterClass
+    public void afterclass() {
+        System.out.println("AfterClass-testeNG");
+    }
+
 }

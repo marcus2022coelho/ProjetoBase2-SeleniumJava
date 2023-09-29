@@ -297,9 +297,9 @@ public class VerTarefaPage extends BasePage {
         salvarFitro.click();
     }
 
-    public void informarNomeDoFiltro(String nomeDoFiltro) {
+    public void informarNomeDoFiltro() {
         WebElement nomeDoFiltroField = wait.until(ExpectedConditions.visibilityOf(driver.findElement(digitarNomeFiltro)));
-        nomeDoFiltroField.sendKeys(nomeDoFiltro);
+        nomeDoFiltroField.sendKeys(gerarNomeAleatorio());
     }
 
     public void salvarFitroDefinitivo() {

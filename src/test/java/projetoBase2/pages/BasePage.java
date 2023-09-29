@@ -129,24 +129,47 @@ public class BasePage {
         return nomeAleatorio.toString();
     }
 
+    public static String gerarEmailAleatório() {
+        String email = "@gmail.com";
+        String nome = gerarNomeAleatorio();
+        String emailFinal = nome + email;
+        return emailFinal;
+    }
+
     public void validaMensagemSucesso() {
         String xpathMensagem = "//*[contains(text(), 'com sucesso')]";
-
         WebElement elementoMensagem = driver.findElement(By.xpath(xpathMensagem));
-
-
         Assert.assertNotNull(elementoMensagem, "A mensagem de sucesso não foi encontrada.");
-
         String mensagemAtual = elementoMensagem.getText();
 
         // Use o Assert para verificar se a mensagem atual contém a mensagem esperada.
         Assert.assertTrue(mensagemAtual.contains("sucesso"), "A mensagem de sucesso não contém o texto esperado.");
     }
 
-    public void validaSucessoStatusCode200(){
+    public void validaSucessoStatusCode200() {
         driver = DriverFactory.getDriver();
         long statusCode = (long) ((JavascriptExecutor) driver).executeScript("return window.performance.getEntries()[0].response.status;");
         Assert.assertEquals(statusCode, 200, "Código de status HTTP diferente de 200.");
     }
-}
+
+    // validar mensagem de sucesso upgrade
+    public static void validarMensagem(String mensagemEsperada, String mensagemAtual) {
+        Assert.assertTrue(mensagemAtual.contains(mensagemEsperada));
+    }
+
+    // validar se elemento existe na tela
+    public static boolean validarSeElementoExiste(WebDriver driver, By elemento) {
+
+        try {
+            WebElement elementoExistente = driver.findElement(elemento);
+            if (elementoExistente != null){
+                return true;
+            }
+        } catch (org.openqa.selenium.NoSuchElementException e) {}
+        return false;
+
+        }
+
+    }
+
 

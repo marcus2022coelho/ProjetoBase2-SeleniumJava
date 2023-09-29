@@ -52,7 +52,7 @@ Feature: LoginMantis
      # | product_name |
       #| nome         |
 
-#    @teste3
+#
 #  Scenario: Realizar Login_LoginSucesso
 #    Given acesso à tela de login
 #    When informar usuario 'administrator'

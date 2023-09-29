@@ -10,10 +10,10 @@ import org.testng.annotations.BeforeClass;
         //dryRun = true,
         tags = "@teste",
         glue = {"projetoBase2"},
-        features = "src/test/resources/features/gerenciarProjetos.feature"
+        features = "src/test/resources/features/gerenciarMarcadores.feature"
 
 )
-public class GerenciarProjetosTest extends AbstractTestNGCucumberTests {
+public class gerenciarMarcadoresTest extends AbstractTestNGCucumberTests {
 
 
     @BeforeClass
@@ -26,5 +26,5 @@ public class GerenciarProjetosTest extends AbstractTestNGCucumberTests {
         System.out.println("AfterClass-testeNG");
     }
 
-
 }
+

@@ -33,13 +33,11 @@ Feature: Cadastrar campos personalizados
       | acessoDeLeitura | acessoDeEscrita|
       | visualizador   | visualizador    |
 
-
   @teste
   Scenario: Vincular o campo personalizado
     And seleciono a tarefa para vincular
     When seleciono o projeto para vincular
     Then seleciono para vincular o campo personalizado
-
 
 
   @teste

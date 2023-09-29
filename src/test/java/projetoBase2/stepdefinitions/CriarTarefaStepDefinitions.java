@@ -65,15 +65,17 @@ public class CriarTarefaStepDefinitions {
     }
 
     // criar tarefa sem preencher os campos obrigatórios
-    @And("^preencher os campos a seguir \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
+    @And("^preencher os campos a seguir \"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\",\"([^\"]*)\"$")
     public void preencherOsCamposAseguir(String frequencia, String gravidade,
-                                         String prioridade, String atribuir, String passosReproduzir, String informacoesAdicionais, String visibilidade) {
+                                         String prioridade, String atribuir, String resumo, String descricao, String passosReproduzir, String informacoesAdicionais, String visibilidade) {
         CriarTarefaPage criarTarefaPage = new CriarTarefaPage(driver);
 
         criarTarefaPage.selecionarFrequencia(frequencia);
         criarTarefaPage.selecionarGravidade(gravidade);
         criarTarefaPage.selecionarPrioridade(prioridade);
         criarTarefaPage.selecionarAtribuir(atribuir);
+        criarTarefaPage.inserirResumo(resumo);
+        criarTarefaPage.inserirDescricao(descricao);
         criarTarefaPage.inserirPassosReproduzir(passosReproduzir);
         criarTarefaPage.inserirInformacoesAdicionais(informacoesAdicionais);
         criarTarefaPage.selecionarVisibilidade();
@@ -82,9 +84,9 @@ public class CriarTarefaStepDefinitions {
     public void validaNaoCriacaoDaTarefa() {
         CriarTarefaPage criarTarefaPage = new CriarTarefaPage(driver);
         String textoAtual = criarTarefaPage.mensagemCampoObrigatorio();
-        String textoEsperado = "preencha os campos";
+        String textoEsperado = "Por favor, verifique novamente suas entradas.";
 
-        Assert.assertTrue(textoAtual.toLowerCase().contains(textoEsperado));
+        assert textoAtual.contains(textoEsperado);
 
     }
 

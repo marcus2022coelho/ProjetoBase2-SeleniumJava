@@ -23,9 +23,9 @@ Feature: Criar uma nova tarefa
 
   @teste
   Scenario Outline: criar uma tarefa sem os campos obrigatorios
-    And preencher os campos a seguir "<frequencia>","<gravidade>","<prioridade>","<atribuir>","<passosReproduzir>","<informacoesAdicionais>","<visibilidade>"
+    And preencher os campos a seguir "<frequencia>","<gravidade>","<prioridade>","<atribuir>","<resumo>","<descricao>","<passosReproduzir>","<informacoesAdicionais>","<visibilidade>"
     When tocar em criar nova tarefa
     Then o sistema exibirá mensagem informativa e não salvará a tarefa
     Examples:
-      | frequencia | gravidade | prioridade | atribuir      | passosReproduzir | informacoesAdicionais | visibilidade |
-      | sempre     | pequeno   | normal     | administrator | teste            | teste                 | publico      |
+      | frequencia | gravidade | prioridade | atribuir      | resumo           | descricao        | passosReproduzir | informacoesAdicionais | visibilidade |
+      | sempre     | pequeno   | normal     | administrator | Tarefa automacao | tarefa automacao | teste            | teste                 | publico      |

@@ -219,10 +219,10 @@ public class VerTarefasStepDefinitions {
         verTarefasPage.salvarFitroSucesso();
     }
 
-    @When("^preencho o \"([^\"]*)\"$")
-    public void preencho_o(String nomeDoFiltro) {
+    @When("^preencho o nome do Filtro$")
+    public void preencho_o() {
         VerTarefaPage verTarefasPage = new VerTarefaPage(driver);
-        verTarefasPage.informarNomeDoFiltro(nomeDoFiltro);
+        verTarefasPage.informarNomeDoFiltro();
     }
 
     @Then("^o sistema salva o filtro$")

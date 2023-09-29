@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber.html", "summary"},
         //dryRun = true,
-        tags = "@regressao",
+        tags = "@teste",
         glue = {"projetoBase2"},
         features = "src/test/resources/features"
 
