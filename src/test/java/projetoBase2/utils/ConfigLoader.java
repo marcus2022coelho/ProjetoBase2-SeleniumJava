@@ -8,13 +8,21 @@ import java.util.Properties;
 public class ConfigLoader {
     private final Properties properties;
     private static ConfigLoader configLoader;
+    private String driverType;
+
 
     private ConfigLoader(){
 
-        String env = System.getProperty("tipoAmb", String.valueOf(TipoAmbienteS.PROD));
+        String env = System.getProperty("tipoAmb", String.valueOf(TipoAmbienteS.GRID));
         switch (TipoAmbienteS.valueOf(env)) {
-            case PROD -> properties = PropertyUtils.propertyLoader("src/test/resources/prod_config.properties");
-            case STAGE -> properties = PropertyUtils.propertyLoader("src/test/resources/stage_config.properties");
+            case LOCAL -> {
+                properties = PropertyUtils.propertyLoader("src/test/resources/local_config.properties");
+                driverType = properties.getProperty("driverType");
+            }
+            case GRID -> {
+                properties = PropertyUtils.propertyLoader("src/test/resources/grid_config.properties");
+                driverType = properties.getProperty("driverType");
+            }
             default -> throw new IllegalStateException("Invalid env:" + env);
         }
     }
@@ -29,8 +37,16 @@ public class ConfigLoader {
     public String getBaseUrl(){
         String prop = properties.getProperty("baseUrl");
         if(prop != null) return prop;
-        else throw new RuntimeException("property baseUrl is not specified in the prod_config.properties file");
+        else throw new RuntimeException("property baseUrl is not specified in the local_config.properties file");
+    }
+    public String getDriverType(){
+        return driverType;
     }
 
 
+    public String getGridHubUrl() {
+        return properties.getProperty("gridHubUrl");
+
+
+    }
 }
