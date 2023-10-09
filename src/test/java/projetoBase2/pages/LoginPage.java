@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import projetoBase2.utils.ScreenShots;
 
 public class LoginPage extends BasePage{
 
@@ -43,6 +44,8 @@ public class LoginPage extends BasePage{
 
     public void confirmar(){
         wait.until(ExpectedConditions.elementToBeClickable(confirmarbotão)).click();
+        ScreenShots.tirarFoto(driver,"Realizar Login_LoginSucesso");
+
     }
 
     public String validaUsuarioLogadoSucesso(){

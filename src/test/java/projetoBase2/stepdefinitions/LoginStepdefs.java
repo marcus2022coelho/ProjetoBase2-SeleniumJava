@@ -13,8 +13,10 @@ import projetoBase2.factory.DriverFactory;
 import projetoBase2.object.Cliente;
 import projetoBase2.pages.BasePage;
 import projetoBase2.pages.LoginPage;
+import projetoBase2.utils.ScreenShots;
 import projetoBase2.utils.Usuario;
 
+import java.io.IOException;
 import java.util.List;
 
 public class LoginStepdefs {
@@ -66,10 +68,11 @@ public class LoginStepdefs {
     }
 
     @Then("o sistema deve realizar o login e exibir a tela do mantis com o usuário logado")
-    public void oSistemaDeveRealizarOLoginEExibirATelaDoMantisComOUsuárioLogado() {
+    public void oSistemaDeveRealizarOLoginEExibirATelaDoMantisComOUsuárioLogado() throws IOException {
         String LoggerUserName = new LoginPage(driver).validaUsuarioLogadoSucesso();
         String expectedUserName = "administrator";
         Assert.assertEquals(LoggerUserName, expectedUserName);
+
 
     }
 
