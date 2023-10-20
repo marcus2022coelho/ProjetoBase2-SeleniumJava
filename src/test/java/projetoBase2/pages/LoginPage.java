@@ -1,5 +1,6 @@
 package projetoBase2.pages;
 
+//import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,7 +46,8 @@ public class LoginPage extends BasePage{
     public void confirmar(){
         wait.until(ExpectedConditions.elementToBeClickable(confirmarbotão)).click();
         ScreenShots.tirarFoto(driver,"Realizar Login_LoginSucesso");
-
+//        Allure.step("Realizar Login_LoginSucesso");
+//
     }
 
     public String validaUsuarioLogadoSucesso(){

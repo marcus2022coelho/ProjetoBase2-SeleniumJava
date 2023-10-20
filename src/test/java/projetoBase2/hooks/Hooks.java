@@ -3,6 +3,7 @@ package projetoBase2.hooks;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
+import projetoBase2.constants.TipoAmbienteS;
 import projetoBase2.factory.DriverFactory;
 
 public class Hooks {

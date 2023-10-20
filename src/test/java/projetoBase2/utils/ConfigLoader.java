@@ -13,7 +13,7 @@ public class ConfigLoader {
 
     private ConfigLoader(){
 
-        String env = System.getProperty("tipoAmb", String.valueOf(TipoAmbienteS.LOCAL));
+        String env = System.getProperty("tipoAmb", String.valueOf(TipoAmbienteS.GRID));
         switch (TipoAmbienteS.valueOf(env)) {
             case LOCAL -> {
                 properties = PropertyUtils.propertyLoader("src/test/resources/local_config.properties");

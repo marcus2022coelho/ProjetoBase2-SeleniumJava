@@ -1,6 +1,6 @@
 package projetoBase2.stepdefinitions;
 
-import io.cucumber.datatable.DataTable;
+//import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

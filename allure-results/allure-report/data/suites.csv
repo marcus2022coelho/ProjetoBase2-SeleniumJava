@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Oct 17 00:05:54 BRT 2023","Tue Oct 17 00:05:59 BRT 2023","5113","Default Suite","ProjetoBase2","projetoBase2.runners.LoginTest","projetoBase2.runners.LoginTest","runScenario","Runs Cucumber Scenarios",""
+"passed","Tue Oct 17 00:05:59 BRT 2023","Tue Oct 17 00:06:03 BRT 2023","3347","Default Suite","ProjetoBase2","projetoBase2.runners.LoginTest","projetoBase2.runners.LoginTest","runScenario","Runs Cucumber Scenarios",""
+"passed","Tue Oct 17 00:06:03 BRT 2023","Tue Oct 17 00:06:06 BRT 2023","3305","Default Suite","ProjetoBase2","projetoBase2.runners.LoginTest","projetoBase2.runners.LoginTest","runScenario","Runs Cucumber Scenarios",""

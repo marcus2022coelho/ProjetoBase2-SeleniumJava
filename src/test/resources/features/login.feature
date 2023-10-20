@@ -1,6 +1,7 @@
 @login_Mantis @mantis
 Feature: LoginMantis
 
+  @teste
   Scenario: Realizar Login_LoginSucesso
     Given acesso a tela de login
     When informar usuario
