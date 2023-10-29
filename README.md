@@ -1,13 +1,13 @@
 # Mantis4Testers Docker
 
-Este projeto foi criado com o intuito de testar minhas habilidades para a criação e manipulação de um projeto de automação de testes front-end, utilizando as melhores práticas do mercado para automação de teste.
+- Este projeto foi criado com o intuito de testar minhas habilidades para a criação e manipulação de um projeto de automação de testes front-end, utilizando as melhores práticas do mercado para automação de teste.
 
-O projeto foi desenvolvido em JAVA, utilizando o SELENIUM web driver e todos os recursos disponíveis para a linguagem.
-Projeto em MAVEN, uma ferramenta de gerenciamento de projetos que ajuda a simplificar e automatizar várias tarefas relacionadas ao ciclo de vida do desenvolvimento de software
+- O projeto foi desenvolvido em JAVA, utilizando o SELENIUM web driver e todos os recursos disponíveis para a linguagem.
+- Projeto em MAVEN, uma ferramenta de gerenciamento de projetos que ajuda a simplificar e automatizar várias tarefas relacionadas ao ciclo de vida do desenvolvimento de software
 
-O sistema alvo é o Mantis BugTracker e é utilizado o Docker para gestão do ambiente e banco de dados.
+- O sistema alvo é o Mantis BugTracker e é utilizado o Docker para gestão do ambiente e banco de dados.
 
-Foi utilizado o Selenium Grid neste projeto.
+- Foi utilizado o Selenium Grid, jenkins, injeção javascript e integração com o banco de dados MariaDB neste projeto.
 
 ## Instalação
 
