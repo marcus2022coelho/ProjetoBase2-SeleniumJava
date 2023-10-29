@@ -75,8 +75,14 @@ Para acessar o banco de dados do Mantis (MariaDB), siga os passos abaixo:
 
 #### 3. Jenkins
 
+- Executando o Jenkins localmente:
 
+- Para executar o Jenkins localmente, você pode baixar o arquivo jenkins.war do [site oficial do Jenkins](https://www.jenkins.io/) ou usar o comando wget para baixá-lo. O arquivo jenkins.war é uma versão executável do Jenkins.
+Depois de baixar o arquivo jenkins.war, você pode iniciar o Jenkins no seu ambiente local usando o comando java -jar jenkins.war.
+Isso iniciará um servidor web embutido e tornará o Jenkins acessível no seu navegador em http://localhost:8080.
+- Na configuração do joob, inserir o tipo de acesso por usuário e senha e informando os dados de acesso do GITHUB.
+- Após isso, é preciso informar os dados do projeto que será executado, para que o jenkins execute sozinho.
+Existem algumas formas de executar o jenkins.
+Manualmente - executando o joob manualmente.
+Trigando uma alteração no código. Sempre que o código alterar, o sistema executa o job do jenkins.
 
-
-
- 
