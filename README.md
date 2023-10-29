@@ -57,6 +57,10 @@ Para acessar o banco de dados do Mantis (MariaDB), siga os passos abaixo:
 
 - Baixe e instale o [software HeidiSQL](https://www.heidisql.com/download.php)
 - Ao abrir o Gerenciador de sessões, preencha com os valores fornecidos no arquivo.
+    - servidor/IP: localhost
+    - Usuário: root
+    - Senha: root
+    - Porta: 3306
 - Abra a conexão e será possível verificar todas as tabelas e registros:
 
 #### 3. Selenium Grid
@@ -67,6 +71,10 @@ Para acessar o banco de dados do Mantis (MariaDB), siga os passos abaixo:
      java -jar selenium-server-4.13.0.jar standalone (java -jar + o nome do arquivo que você baixou)
 - Com isso, o selenium grid já estará em execução na sua máquina.
 - Parabens!! agora basta configurar o seu projeto para rodar no grid!
+
+
+#### 3. Jenkins
+
 
 
 
