@@ -5,3 +5,4 @@ target
 .gitignore
 allure-results/
 screenShots/
+DataBaseConfig.java

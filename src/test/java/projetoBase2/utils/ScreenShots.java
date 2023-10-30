@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat;
 public class ScreenShots {
 
     public static void tirarFoto(WebDriver driver, String nomeDoArquivo) {
-
         String arquivo = "C:\\Projetos\\ProjetoBase2\\screenShots\\" + nomeDoArquivo + ScreenShots.dataHoraParaArquivo();
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
